@@ -19,6 +19,16 @@ get_header(); ?>
 
 else :
 endif;
+
+if (get_field('theme_color')) { ?>
+  <p style="color:<?php echo get_field('theme_color') ?>">theme color = <?php echo get_field('theme_color') ?></p>
+<?php }
+
+
+if (get_field('editor')) { ?>
+  <?php echo get_field('editor') ?>
+<?php }
+
 ?>
 
 <?php //get_sidebar(); ?>
