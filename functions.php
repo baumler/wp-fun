@@ -22,7 +22,7 @@ function theme_setup() {
 add_action( 'after_setup_theme', 'theme_setup' );
 
 
-/** Add styles to classic editor (no plugin) */
+/** Add styles to classic editor (no plugin)
 // custom editor dropdown
 function add_style_select_buttons( $buttons ) {
   array_unshift( $buttons, 'styleselect' );
@@ -73,11 +73,11 @@ function custom_editor_styles() {
 function custom_stylesheet() {
   wp_enqueue_style('editor-styles', get_template_directory_uri() . '/editor-styles.css');
 }
-//add_action( 'wp_enqueue_scripts', 'custom_stylesheet' );
+//add_action( 'wp_enqueue_scripts', 'custom_stylesheet' );*/
 /** END Add styles to classic editor (no plugin) */
 
 
-// Add Quicktags
+// Add Quicktags to editor
 function custom_quicktags() {
 
   if ( wp_script_is( 'quicktags' ) ) {
