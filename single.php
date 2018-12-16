@@ -13,7 +13,13 @@ get_header(); ?>
   <?php
   while ( have_posts() ) : the_post();
     the_title( '<h1 class="entry-title">', '</h1>' );
+  ?>
+  #<?php the_field( 'number' ); ?><br/>
+  <?php the_field( 'description' ); ?><br/>
+  <?php the_field( 'calories' ); ?> CAL<br/>
+  $<?php the_field( 'price' ); ?><br/>
 
+    <?php
     the_content();
   endwhile;
 
