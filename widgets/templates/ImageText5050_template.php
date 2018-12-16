@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<div style="display: flex;">
-  <div style="width: 50%;"><?=$instance['title']?></div>
-  <div style="width: 50%;"><?=$instance['header']?></div>
+<div class="flex">
+  <div class="w50"><?=$instance['title']?></div>
+  <div class="w50"><?=$instance['header']?></div>
 </div>

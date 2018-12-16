@@ -77,6 +77,17 @@ function custom_stylesheet() {
 /** END Add styles to classic editor (no plugin) */
 
 
+// add css to the admin and theme
+function custom_styles_admin() {
+  add_editor_style('test-styles.css');
+}
+add_action('init', 'custom_styles_admin');
+
+function custom_styles() {
+  wp_enqueue_style( 'test-styles', get_template_directory_uri() . '/test-styles.css',false,'1.1','all' );
+}
+add_action( 'wp_enqueue_scripts', 'custom_styles' );
+
 // Add Quicktags to editor
 function custom_quicktags() {
 
